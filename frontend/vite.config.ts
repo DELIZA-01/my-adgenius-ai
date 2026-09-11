@@ -33,8 +33,12 @@ export default defineConfig({
     port: 5173,
     host: true,
   },
+  // preview: {
+  //   host: true,
+  //   allowedHosts: ['my-adgenius-ai-frontend.onrender.com'],
+  // },
   preview: {
-    host: true,
-    allowedHosts: ['my-adgenius-ai-frontend.onrender.com'],
-  },
+  host: true,
+  allowedHosts: ['my-adgenius-ai-frontend.onrender.com'],
+},
 })
