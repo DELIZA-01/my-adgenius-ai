@@ -5,12 +5,12 @@ import { apiClient } from '../../api/client';
 
 export interface UploadedAsset {
   id: number;
-  file_id: str;
-  file_name: str;
-  url: str;
-  thumbnail_url?: str;
+  file_id: string;
+  file_name: string;
+  url: string;
+  thumbnail_url?: string;
   file_size?: number;
-  mime_type?: str;
+  mime_type?: string;
 }
 
 interface ProductImageUploaderProps {
@@ -84,7 +84,7 @@ export const ProductImageUploader: React.FC<ProductImageUploaderProps> = ({
       const errMsg = err.response?.data?.detail || 'Cloud upload failed. Please try again.';
       setLocalError(errMsg);
       if (onError) onError(errMsg);
-    } fontinally: {
+    } finally {
       setUploading(false);
       setUploadProgress(0);
     }
